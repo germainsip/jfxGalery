@@ -1,14 +1,17 @@
 package fr.tomoetek.jfxgalery.model;
 
 public class Exemple {
-    private String fxml;
+    private String exempleFxml;
     private String name;
     private String comment;
 
-    public Exemple( String name, String comment) {
-        this.fxml = "exemple_tile.fxml";
+    private String fxml;
+
+    public Exemple( String name, String comment, String fxml) {
+        this.exempleFxml = "exemple_tile.fxml";
         this.name = name;
         this.comment = comment;
+        this.fxml = fxml;
     }
 
     public String getFxml() {
@@ -21,5 +24,9 @@ public class Exemple {
 
     public String getComment() {
         return comment;
+    }
+
+    public String getExempleFxml() {
+        return exempleFxml;
     }
 }

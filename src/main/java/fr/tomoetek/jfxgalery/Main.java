@@ -10,8 +10,7 @@ import javafx.stage.StageStyle;
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        System.out.println(getClass().getResource("gui/exemple_tile.fxml"));
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui/exemple_tile.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gui/les_boutons.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setTitle("JFX Galerie");

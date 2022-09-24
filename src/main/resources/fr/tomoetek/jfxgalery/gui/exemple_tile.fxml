@@ -14,7 +14,7 @@
    <children>
       <HBox fx:id="boitePrincipale" alignment="CENTER_LEFT" prefHeight="27.0" spacing="20.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton fx:id="genBtn" alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="215.0" style="-fx-background-color: #3c5c84;" text="TestButt" textFill="WHITE" wrapText="true">
+            <JFXButton onAction="#chargeChap" fx:id="genBtn" alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="215.0" style="-fx-background-color: #3c5c84;" text="TestButt" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Arial Bold" size="13.0" />
                </font></JFXButton>

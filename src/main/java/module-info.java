@@ -7,6 +7,7 @@ module fr.tomoetek.jfxgalery {
 
     opens fr.tomoetek.jfxgalery.gui to javafx.fxml;
     opens fr.tomoetek.jfxgalery.gui.exemple to javafx.fxml;
+    opens fr.tomoetek.jfxgalery.gui.buttons to javafx.fxml;
 
     exports fr.tomoetek.jfxgalery;
     exports fr.tomoetek.jfxgalery.tools;

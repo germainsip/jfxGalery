@@ -23,6 +23,8 @@ public class MainController implements FenToolInterface {
     public JFXButton fermeButt;
     public VBox listBox;
 
+
+
     @Override
     public void closeHandle(ActionEvent actionEvent) {
         FenToolInterface.super.closeHandle(actionEvent);
@@ -33,25 +35,28 @@ public class MainController implements FenToolInterface {
 
     public void initialize() throws IOException {
         //System.out.println("salut");
-        Exemple[] exTab = {new Exemple("test1","grgrgrgrgrg"),new Exemple("test2","bla bla bla")};
-        /*for (Exemple ex : exTab)
+        Exemple[] exTab = {
+                new Exemple("Les boutons","boutons actionable de JFX","les_boutons.fxml"),
+
+        };
+        for (Exemple ex : exTab)
         {
-            System.out.println(App.class.getResource("gui/"+ex.getFxml()));
-            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("gui/"+ex.getFxml()));
+            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("gui/"+ex.getExempleFxml()));
             Parent exFen = fxmlLoader.load();
             ExempleTileController controller = fxmlLoader.getController();
-            controller.setValues(ex.getName(), ex.getComment());
+            controller.setExemple(ex);
+           // controller.setValues(ex.getName(), ex.getComment());
             listBox.getChildren().add(exFen);
 
-        }*/
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("exemple.fxml"));
-        try {
+        }
+        //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("exemple_tile.fxml"));
+        /*try {
             Parent exFen = fxmlLoader.load();
 
         }catch (Exception ex){
             System.out.println(ex.getMessage());
             System.out.println(ex.getCause());
-        }
+        }*/
 
     }
 
