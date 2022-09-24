@@ -7,18 +7,28 @@ import javafx.scene.Node;
 import javafx.stage.Stage;
 import javafx.scene.web.WebView;
 
-public abstract class FenTool {
-    public WebView webView;
-    public JFXButton fermeButt;
+/**
+ * L'interface FenToolInterface est utilisée pour ajouter les fonctionnalités récurrentes de l'application
+ */
+public interface FenToolInterface {
+    public WebView webView = new WebView();
+    public JFXButton fermeButt = new JFXButton();
 
-    public void loadCours(String link){
+    public default void loadCours(String link){
         webView.getEngine().load(String.format("https://germainsip.github.io/post/cours/java/javafxelmts/#%s", link));
 
     }
+
+    /**
+     * Méthode de fermeture de la fenêtre en cours
+     * @param actionEvent
+     */
     @FXML
-    public void closeHandle(ActionEvent actionEvent) {
+    public default void closeHandle(ActionEvent actionEvent) {
         final Node source = (Node) actionEvent.getSource();
         final Stage stage = (Stage) source.getScene().getWindow();
         stage.close();
     }
+
+
 }

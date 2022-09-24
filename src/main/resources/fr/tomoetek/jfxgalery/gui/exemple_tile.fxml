@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="80.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.tomoetek.jfxgalery.gui.exemple.ExempleTileController">
+   <children>
+      <HBox fx:id="boitePrincipale" alignment="CENTER_LEFT" prefHeight="27.0" spacing="20.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="genBtn" alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="215.0" style="-fx-background-color: #3c5c84;" text="TestButt" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font></JFXButton>
+            <Label fx:id="commentLab" prefWidth="300.0" text="Label" wrapText="true" />
+            <ImageView fitHeight="52.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@tomoe4wdev.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
