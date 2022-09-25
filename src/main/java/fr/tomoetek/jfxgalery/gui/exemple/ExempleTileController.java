@@ -44,6 +44,7 @@ public class ExempleTileController implements FenToolInterface {
             stage.show();
 
             // Méthodes pour permettre le dragg de la fenêtre
+            //TODO: à factoriser dans FenToolInterface
             AtomicReference<Double> xOffset = new AtomicReference<>((double) 0);
             AtomicReference<Double> yOffset = new AtomicReference<>((double) 0);
             scene.setOnMousePressed(event -> {

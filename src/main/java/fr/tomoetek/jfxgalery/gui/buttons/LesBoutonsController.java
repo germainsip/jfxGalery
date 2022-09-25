@@ -7,9 +7,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.web.WebView;
 
+import java.net.URISyntaxException;
+
 public class LesBoutonsController implements FenToolInterface {
 
-    public WebView buttonWebview;
+
+    public WebView webView;
     public Button btn1;
     public Button btn2;
     public Label res;
@@ -22,12 +25,13 @@ public class LesBoutonsController implements FenToolInterface {
     }
 
     @Override
-    public void loadCours(String link) {
-        FenToolInterface.super.loadCours(link);
+    public void loadCours(String link,WebView webView) throws URISyntaxException {
+        FenToolInterface.super.loadCours(link, webView);
     }
 
-    public void initialize() {
-        loadCours("les-button-et-label");
+    public void initialize() throws URISyntaxException {
+
+        loadCours("les-button-et-label", this.webView);
     }
 
     /**
