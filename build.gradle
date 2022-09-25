@@ -35,6 +35,8 @@ javafx {
 
 dependencies {
     implementation 'org.rationalityfrontline.workaround:jfoenix:17.0.2'
+    implementation 'com.vladsch.flexmark:flexmark-all:0.64.0'
+    implementation 'commons-io:commons-io:2.11.0'
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")

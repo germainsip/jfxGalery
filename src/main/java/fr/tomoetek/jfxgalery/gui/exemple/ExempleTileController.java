@@ -13,10 +13,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class ExempleTileController implements FenToolInterface {
     public JFXButton genBtn;
@@ -37,7 +39,22 @@ public class ExempleTileController implements FenToolInterface {
             Parent exFen = fxmlLoader.load();
             Scene scene =new Scene(exFen);
             stage.setScene(scene);
+            stage.initStyle(StageStyle.UNDECORATED);
+
             stage.show();
+
+            // Méthodes pour permettre le dragg de la fenêtre
+            AtomicReference<Double> xOffset = new AtomicReference<>((double) 0);
+            AtomicReference<Double> yOffset = new AtomicReference<>((double) 0);
+            scene.setOnMousePressed(event -> {
+                xOffset.set(stage.getX() - event.getScreenX());
+                yOffset.set(stage.getY() - event.getScreenY());
+            });
+            scene.setOnMouseDragged(event -> {
+                stage.setX(event.getScreenX() + xOffset.get());
+                stage.setY(event.getScreenY() + yOffset.get());
+            });
+
         } catch (Exception e){
             System.out.println(this.exemple.getFxml());
             System.out.println("Le path: "+ App.class.getResource("gui/"+this.exemple.getFxml()));
