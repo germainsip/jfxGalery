@@ -3,11 +3,9 @@ package fr.tomoetek.jfxgalery.gui.exemple;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.effects.JFXDepthManager;
 import fr.tomoetek.jfxgalery.App;
-import fr.tomoetek.jfxgalery.gui.MainController;
 import fr.tomoetek.jfxgalery.model.Exemple;
 import fr.tomoetek.jfxgalery.tools.FenToolInterface;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -15,9 +13,6 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class ExempleTileController implements FenToolInterface {

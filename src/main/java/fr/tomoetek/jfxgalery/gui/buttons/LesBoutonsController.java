@@ -45,7 +45,7 @@ public class LesBoutonsController implements FenToolInterface {
         // récupération du bouton cliqué
         Button btnActive = (Button) actionEvent.getSource();
         //construction du message avec le texte du bouton
-        String message = "Le " + btnActive.getText() + " vient d'être cliqué!";
+        String message = "Le " + btnActive.getText() + "\n vient d'être cliqué!";
         //envoie du message dans le label
         res.setText(message);
     }
@@ -53,7 +53,7 @@ public class LesBoutonsController implements FenToolInterface {
 
     public void toggleAction(ActionEvent actionEvent) {
        if(toggleBtn.isSelected()){
-           res.setStyle("-fx-border-color: chartreuse; -fx-border-width: 5");
+           res.setStyle("-fx-border-color: #3c5c84; -fx-border-width: 5");
        }else {
            res.setStyle("");
        }

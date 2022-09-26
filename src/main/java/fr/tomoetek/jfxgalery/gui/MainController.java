@@ -31,16 +31,8 @@ public class MainController implements FenToolInterface {
     private static double yOffset;
 
     public void initialize() throws IOException {
-        //System.out.println("salut");
         Exemple[] exTab = {
-                new Exemple("Les boutons","boutons actionable de JFX","buttons/les_boutons.fxml"),
-                new Exemple("Les boutons","boutons actionable de JFX","buttons/les_boutons.fxml"),
-                new Exemple("Les boutons","boutons actionable de JFX","buttons/les_boutons.fxml"),
-                new Exemple("Les boutons","boutons actionable de JFX","buttons/les_boutons.fxml"),
-                new Exemple("Les boutons","boutons actionable de JFX","buttons/les_boutons.fxml"),
-                new Exemple("Les boutons","boutons actionable de JFX","buttons/les_boutons.fxml"),
-                new Exemple("Les boutons","boutons actionable de JFX","buttons/les_boutons.fxml"),
-                new Exemple("Les boutons","boutons actionable de JFX","buttons/les_boutons.fxml"),
+                new Exemple("Les boutons et labels","boutons actionable de JFX","buttons/les_boutons.fxml"),
 
         };
         for (Exemple ex : exTab)
