@@ -24,6 +24,7 @@ public class LesBoutonsController implements FenToolInterface {
         FenToolInterface.super.closeHandle(actionEvent);
     }
 
+
     @Override
     public void loadCours(String link,WebView webView) throws URISyntaxException {
         FenToolInterface.super.loadCours(link, webView);
@@ -31,7 +32,9 @@ public class LesBoutonsController implements FenToolInterface {
 
     public void initialize() throws URISyntaxException {
 
-        loadCours("les-button-et-label", this.webView);
+
+        //System.out.println(chemTab);
+       loadCours("les_boutons", this.webView);
     }
 
     /**

@@ -14,6 +14,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException, URISyntaxException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("gui/main.fxml"));
+       // System.out.println(App.class.getResource("gui/main.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("JFX Galerie");
         stage.initStyle(StageStyle.UNDECORATED);

@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'fr.tomoetek'
-version '1.0-SNAPSHOT'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -27,6 +27,8 @@ application {
     mainModule = 'fr.tomoetek.jfxgalery'
     mainClass = 'fr.tomoetek.jfxgalery.App'
 }
+
+
 
 javafx {
     version = '19-ea+7'
@@ -52,8 +54,16 @@ jlink {
     launcher {
         name = 'app'
     }
+    jpackage{
+        icon ='src/main/resources/tomoe4wdev.icns'
+
+    }
+
 }
+
+
 
 jlinkZip {
     group = 'distribution'
 }
+

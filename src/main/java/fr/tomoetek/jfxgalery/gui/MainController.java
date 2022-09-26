@@ -37,7 +37,7 @@ public class MainController implements FenToolInterface {
         };
         for (Exemple ex : exTab)
         {
-            FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("gui/"+ex.getExempleFxml()));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(ex.getExempleFxml()));
             Parent exFen = fxmlLoader.load();
             ExempleTileController controller = fxmlLoader.getController();
             controller.setExemple(ex);
