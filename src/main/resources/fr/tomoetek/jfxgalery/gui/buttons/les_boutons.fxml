@@ -33,7 +33,7 @@
          </VBox>
       </left>
       <center>
-         <WebView fx:id="webView" fontScale="0.8" prefHeight="400.0" prefWidth="950.0" BorderPane.alignment="CENTER">
+         <WebView fx:id="webView" prefHeight="400.0" BorderPane.alignment="CENTER">
             <effect>
                <InnerShadow />
             </effect>

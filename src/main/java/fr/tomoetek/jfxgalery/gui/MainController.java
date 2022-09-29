@@ -33,6 +33,7 @@ public class MainController implements FenToolInterface {
     public void initialize() throws IOException {
         Exemple[] exTab = {
                 new Exemple("Les boutons et labels","boutons actionable de JFX","buttons/les_boutons.fxml"),
+                new Exemple("Les Champs texte","Un bon début pour des formulaires","champs/les_champs.fxml"),
 
         };
         for (Exemple ex : exTab)

@@ -30,6 +30,7 @@ public class ExempleTileController implements FenToolInterface {
     public void chargeChap() {
         Stage stage = new Stage();
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("gui/"+this.exemple.getFxml()));
+
         try {
             Parent exFen = fxmlLoader.load();
             Scene scene =new Scene(exFen);

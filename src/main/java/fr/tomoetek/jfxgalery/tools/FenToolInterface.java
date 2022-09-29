@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * L'interface FenToolInterface est utilisée pour ajouter les fonctionnalités récurrentes de l'application
@@ -49,10 +50,10 @@ public interface FenToolInterface {
             com.vladsch.flexmark.util.ast.Node document = parser.parse(contents);
             String html = renderer.render(document);
             String css = (App.class.getResourceAsStream("gui/retro.css") != null)? IOUtils.toString(
-                    App.class.getResourceAsStream("gui/retro.css"), StandardCharsets.UTF_8
+                    Objects.requireNonNull(App.class.getResourceAsStream("gui/retro.css")), StandardCharsets.UTF_8
             ):"";
 
-            html = "<style>"+css+"</style>"+html;
+            html = "<style>"+css+"</style><body>"+html+"</body>";
 
 
             webView.getEngine().loadContent(html);

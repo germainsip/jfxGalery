@@ -19,6 +19,17 @@ public class LesBoutonsController implements FenToolInterface {
     public Button fermeButt;
     public ToggleButton toggleBtn;
 
+    public static LesBoutonsController frame;
+
+    public LesBoutonsController() {
+        if (frame == null) {
+            frame = this;
+        } else {
+            throw new RuntimeException("Singleton FXML");
+        }
+    }
+
+
     @Override
     public void closeHandle(ActionEvent actionEvent) {
         FenToolInterface.super.closeHandle(actionEvent);

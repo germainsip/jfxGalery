@@ -87,7 +87,7 @@ a:active {
 }
 
 html {
-    font-size: 12px;
+    font-size: 10px;
 }
 
 @media screen and (min-width: 32rem) and (max-width: 48rem) {
@@ -110,6 +110,7 @@ p,
 .retro-p {
     font-size: 1rem;
     margin-bottom: 1.3rem;
+    /*padding: 3rem;*/
 }
 
 h1,
@@ -180,16 +181,17 @@ body {
 }
 
 html {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 body {
-    color: #fafafa;
-    font-family: "Courier New";
+    color: #79d34a;
+    font-family: "Courier New", serif;
     line-height: 1.45;
     margin: 1rem auto 1rem;
     max-width: 48rem;
-    padding: .25rem;
+    /*padding: .25rem;*/
+    padding: 2rem;
 }
 
 pre {
