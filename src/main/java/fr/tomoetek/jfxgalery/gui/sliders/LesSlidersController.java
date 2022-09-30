@@ -3,8 +3,6 @@ package fr.tomoetek.jfxgalery.gui.sliders;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXSlider;
 import fr.tomoetek.jfxgalery.tools.FenToolInterface;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
@@ -15,7 +13,7 @@ import java.net.URISyntaxException;
 import java.text.DecimalFormat;
 import java.text.Format;
 
-public class LesSlidersController implements FenToolInterface, ChangeListener {
+public class LesSlidersController implements FenToolInterface {
     public Slider hSlide;
     public Slider vSlide;
     public Label horizonLab;
@@ -27,9 +25,22 @@ public class LesSlidersController implements FenToolInterface, ChangeListener {
 
 
     public void initialize(){
-        hSlide.valueProperty().addListener(this);
-        vSlide.valueProperty().addListener(this);
-        hSliderJFX.valueProperty().addListener(this);
+        hSlide.valueProperty().addListener((obs,oldValue,newValue)->{
+                Format df = new DecimalFormat("#.##");
+                String horizonValue = df.format(hSlide.getValue());
+
+                horizonLab.setText("H: " + horizonValue);
+        });
+        vSlide.valueProperty().addListener((obs,oldValue,newValue)->{
+            Format df = new DecimalFormat("#.##");
+            String verticalValue = df.format(vSlide.getValue());
+            verticalLab.setText("V: "+verticalValue);
+
+        });
+        hSliderJFX.valueProperty().addListener((obs,oldValue,newValue)->{
+            greenArc.setLength(hSliderJFX.getValue());
+        });
+
     }
 
     @Override
@@ -42,14 +53,5 @@ public class LesSlidersController implements FenToolInterface, ChangeListener {
         FenToolInterface.super.closeHandle(actionEvent);
     }
 
-    @Override
-    public void changed(ObservableValue observable, Object oldValue, Object newValue) {
-        Format df = new DecimalFormat("#.##");
-        String horizonValue = df.format(hSlide.getValue());
-        String verticalValue = df.format(vSlide.getValue());
 
-        horizonLab.setText("H: " + horizonValue);
-        verticalLab.setText("V: "+verticalValue);
-        greenArc.setLength(hSliderJFX.getValue());
-    }
 }
