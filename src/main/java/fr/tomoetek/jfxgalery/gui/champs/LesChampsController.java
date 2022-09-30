@@ -26,7 +26,7 @@ public class LesChampsController implements FenToolInterface {
     public WebView webView;
     public JFXButton fermButt;
 
-
+// TODO: transformer en singleton
     public void initialize() throws URISyntaxException {
 loadCours("les_champs",this.webView);
     }

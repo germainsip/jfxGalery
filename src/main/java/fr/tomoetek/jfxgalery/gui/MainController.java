@@ -34,6 +34,7 @@ public class MainController implements FenToolInterface {
         Exemple[] exTab = {
                 new Exemple("Les boutons et labels","boutons actionable de JFX","buttons/les_boutons.fxml"),
                 new Exemple("Les Champs texte","Un bon début pour des formulaires","champs/les_champs.fxml"),
+                new Exemple("Les sliders","Des ...","sliders/les_sliders.fxml"),
 
         };
         for (Exemple ex : exTab)
